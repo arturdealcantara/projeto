@@ -1,0 +1,55 @@
+a:link, a:visited{
+    color: white;
+    text-decoration: none;
+}
+html{
+    background-image: url(../imagens/fundo.png);
+    background-repeat: no-repeat;
+}
+body {
+    font-family: 'Ubuntu Condensed', sans-serif;
+    color: black;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+    margin:auto;
+    width: 65%;
+    background-color: #ffffffc0;
+    padding: 20px;
+}
+#discord{
+    float: right;
+    bottom: 10px;
+    right: 10px;
+    position: fixed;
+    background-color: #7289da;
+    border-radius: 5px;
+    transition-duration: 1s;
+}
+#discord iframe:hover{
+    height: 300px;
+    width: 240px;
+}
+#discord:hover{
+    image-resolution: 0xp 0px;
+    background-color: #181818;
+    height: 300px;
+    width: 240px;
+    border-radius: 8px;
+}
+img{
+    max-width: 30%;
+
+}
+.convite{
+    font-size: 30px;
+    border-radius: 4px;
+    padding: 10px;
+    color: white;
+    min-width: 100px;
+    display: inline-block;
+    background-color: #181818;
+    margin-bottom: 20px;
+}
+hr{
+    color: #181818;
+}
