@@ -23,8 +23,8 @@ section: "Conditions",
 //---------------------------------------------------------------------
 
 subtitle: function(data) {
-	const results = ["Continue Actions", "Stop Action Sequence", "Jump To Action", "Jump Forward Actions"];
-	return `If True: ${results[parseInt(data.iftrue)]} ~ If False: ${results[parseInt(data.iffalse)]}`;
+	const results = ["Continuar as Ações", "Parar a Sequência de Ações", "Saltar Para a Ação", "Ignorar as Próximas Ações"];
+	return `Se for Verdade: ${results[parseInt(data.iftrue)]} ~ Se for Falsa: ${results[parseInt(data.iffalse)]}`;
 },
 
 //---------------------------------------------------------------------

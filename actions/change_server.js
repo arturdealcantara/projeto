@@ -23,7 +23,7 @@ section: "Server Control",
 //---------------------------------------------------------------------
 
 subtitle: function(data) {
-	const servers = ['Current Server', 'Temp Variable', 'Server Variable', 'Global Variable'];
+	const servers = ['Servidor Atual', 'Variável Temporária', 'Variável de Servidor', 'Variável Global'];
 	return `${servers[parseInt(data.server)]}`;
 },
 
@@ -57,13 +57,13 @@ html: function(isEvent, data) {
 	return `
 <div>
 	<div style="float: left; width: 35%;">
-		Change Server To:<br>
+	Alterar Servidor Para:<br>
 		<select id="server" class="round" onchange="glob.serverChange(this, 'varNameContainer')">
 			${data.servers[isEvent ? 1 : 0]}
 		</select>
 	</div>
 	<div id="varNameContainer" style="display: none; float: right; width: 60%;">
-		Variable Name:<br>
+		Nome da Variável:<br>
 		<input id="varName" class="round" type="text" list="variableList">
 	</div>
 </div>`

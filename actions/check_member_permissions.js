@@ -23,8 +23,8 @@ section: "Conditions",
 //---------------------------------------------------------------------
 
 subtitle: function(data) {
-	const results = ["Continue Actions", "Stop Action Sequence", "Jump To Action", "Jump Forward Actions"];
-	return `If True: ${results[parseInt(data.iftrue)]} ~ If False: ${results[parseInt(data.iffalse)]}`;
+	const results = ["Continuar as Ações", "Para a Sequência de Ações", "Saltar Para a Ação", "Ignorar as Próximas Ações"];
+	return `Se for Verdade: ${results[parseInt(data.iftrue)]} ~ Se for Falsa: ${results[parseInt(data.iffalse)]}`;
 },
 
 //---------------------------------------------------------------------
@@ -57,18 +57,18 @@ html: function(isEvent, data) {
 	return `
 <div>
 	<div style="float: left; width: 35%;">
-		Source Member:<br>
+		Fonte do Membro:<br>
 		<select id="member" class="round" onchange="glob.memberChange(this, 'varNameContainer')">
 			${data.members[isEvent ? 1 : 0]}
 		</select>
 	</div>
 	<div id="varNameContainer" style="display: none; float: right; width: 60%;">
-		Variable Name:<br>
+		Nome da Variável:<br>
 		<input id="varName" class="round" type="text" list="variableList"><br>
 	</div>
 </div><br><br><br>
 <div style="padding-top: 8px; width: 80%;">
-	Permission:<br>
+	Permissão:<br>
 	<select id="permission" class="round">
 		${data.permissions[2]}
 	</select>

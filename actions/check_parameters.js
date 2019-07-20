@@ -31,8 +31,8 @@ section: "Conditions",
 //---------------------------------------------------------------------
 
 subtitle: function(data) {
-	const results = ["Continue Actions", "Stop Action Sequence", "Jump To Action", "Jump Forward Actions"];
-	return `If True: ${results[parseInt(data.iftrue)]} ~ If False: ${results[parseInt(data.iffalse)]}`;
+	const results = ["Continuar as Ações", "Parar a Sequência de Ações", "Saltar Para a Ação", "Ignorar as Próximas Ações"];
+	return `Se for Verdade: ${results[parseInt(data.iftrue)]} ~ Se for Falsa: ${results[parseInt(data.iffalse)]}`;
 },
 
 //---------------------------------------------------------------------
@@ -65,16 +65,16 @@ html: function(isEvent, data) {
 	return `
 <div>
 	<div style="float: left; width: 45%;">
-		Condition:<br>
+		Condição:<br>
 		<select id="condition" class="round">
-			<option value="0" selected>Number of Parameters is...</option>
-			<option value="1">Number of Member Mentions are...</option>
-			<option value="2">Number of Channel Mentions are...</option>
-			<option value="3">Number of Role Mentions are...</option>
+			<option value="0" selected>Número de Parâmetros é...</option>
+			<option value="1">Número de Menções de Membros é...</option>
+			<option value="2">Número de Menções de Canais é...</option>
+			<option value="3">Número de Menções de Cargos é...</option>
 		</select>
 	</div>
 	<div style="padding-left: 5%; float: left; width: 25%;">
-		Comparison:<br>
+	Comparação:<br>
 		<select id="comparison" class="round">
 			<option value="0" selected>=</option>
 			<option value="1">\<</option>
@@ -82,7 +82,7 @@ html: function(isEvent, data) {
 		</select>
 	</div>
 	<div style="padding-left: 5%; float: left; width: 25%;">
-		Number:<br>
+		Número:<br>
 		<input id="value" class="round" type="text">
 	</div>
 </div><br><br><br>

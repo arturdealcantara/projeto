@@ -23,7 +23,7 @@ section: "Audio Control",
 //---------------------------------------------------------------------
 
 subtitle: function(data) {
-	return 'The queue is cleared.';
+	return 'Limpa a Fila';
 },
 
 //---------------------------------------------------------------------

@@ -23,9 +23,9 @@ section: "Deprecated",
 //---------------------------------------------------------------------
 
 subtitle: function(data) {
-	const results = ["Continue Actions", "Stop Action Sequence", "Jump To Action", "Jump Forward Actions"];
-	return `If True: ${results[parseInt(data.iftrue)]} ~ If False: ${results[parseInt(data.iffalse)]}`;
-},
+	const results = ["Continuar as Ações", "Parar a Sequência de Ações", "Saltar Para a Ação", "Ignorar as Próximas Ações"];
+	return `Se for Verdade: ${results[parseInt(data.iftrue)]} ~ Se for Falsa: ${results[parseInt(data.iffalse)]}`;
+}, 
 
 //---------------------------------------------------------------------
 // DBM Mods Manager Variables (Optional but nice to have!)
@@ -41,7 +41,7 @@ author: "MrGold",
 version: "1.9.5", //Added in 1.9.5
 
 // A short description to show on the mod line for this mod (Must be on a single line)
-short_description: "Check if a Global Data Value meets the conditions",
+short_description: "Verifique se um valor de dados global atende às condições",
 
 // If it depends on any other mods by name, ex: WrexMODS if the mod uses something from WrexMods
 
@@ -77,24 +77,24 @@ html: function(isEvent, data) {
 	return `
 <div style="padding-top: 8px;">
 	<div style="float: left; width: 50%;">
-		Data Name:<br>
+	Nome da Data:<br>
 		<input id="dataName" class="round" type="text">
 	</div>
 	<div style="float: left; width: 45%;">
-		Comparison Type:<br>
+	 Tipo de Comparação:<br>
 		<select id="comparison" class="round">
-			<option value="0">Exists</option>
-			<option value="1" selected>Equals</option>
-			<option value="2">Equals Exactly</option>
-			<option value="3">Less Than</option>
-			<option value="4">Greater Than</option>
-			<option value="5">Includes</option>
-			<option value="6">Matches Regex</option>
+			<option value="0">Existe</option>
+			<option value="1" selected>Igual</option>
+			<option value="2">Exatamente Igual</option>
+			<option value="3">Menor Que</option>
+			<option value="4">Maior Que</option>
+			<option value="5">Inclui</option>
+			<option value="6">Corresponde a Regex</option>
 		</select>
 	</div>
 </div><br><br><br>
 <div style="padding-top: 8px;">
-	Value to Compare to:<br>
+ Comparar Valor a:<br>
 	<input id="value" class="round" type="text" name="is-eval">
 </div>
 <div style="padding-top: 16px;">
@@ -139,7 +139,7 @@ action: function(cache) {
 	const filePath = path.join(process.cwd(), "data", "globals.json");
 
 	if(!fs.existsSync(filePath)) {
-		console.log("ERROR: Globals JSON file does not exist!");
+		console.log("ERRO: Arquivo Globals JSON não existe");
 		this.callNextAction(cache);
 		return;
 	}

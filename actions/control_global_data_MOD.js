@@ -40,7 +40,7 @@ author: "MrGold",
 version: "1.9.5", //Added in 1.9.5
 
 // A short description to show on the mod line for this mod (Must be on a single line)
-short_description: "Adds/sets value to Globals JSON file",
+short_description: "Adiciona/define valor ao arquivo JSON de GlobalVars",
 
 // If it depends on any other mods by name, ex: WrexMODS if the mod uses something from WrexMods
 
@@ -76,19 +76,19 @@ html: function(isEvent, data) {
 	return `
 <div style="padding-top: 8px;">
 	<div style="float: left; width: 50%;">
-		Data Name:<br>
+		Nome da Data:<br>
 		<input id="dataName" class="round" type="text">
 	</div>
 	<div style="float: left; width: 45%;">
-		Control Type:<br>
+	Tipo de Controle:<br>
 		<select id="changeType" class="round">
-			<option value="0" selected>Set Value</option>
-			<option value="1">Add Value</option>
+			<option value="0" selected>Definir Valor</option>
+			<option value="1">Adicionar Valor</option>
 		</select>
 	</div>
 </div><br><br><br>
 <div style="padding-top: 8px;">
-	Value:<br>
+	Valor:<br>
 	<input id="value" class="round" type="text" name="is-eval"><br>
 </div>`
 },

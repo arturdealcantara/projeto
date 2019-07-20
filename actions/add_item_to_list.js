@@ -23,8 +23,8 @@ section: "Lists and Loops",
 //---------------------------------------------------------------------
 
 subtitle: function(data) {
-	const storage = ['', 'Temp Variable', 'Server Variable', 'Global Variable'];
-	return `Add "${data.value}" to ${storage[parseInt(data.storage)]} (${data.varName})`;
+	const storage = ['', 'Variável Temporária', 'Variável de Servidor', 'Variável Global'];
+	return `Adicionar "${data.value}" Para ${storage[parseInt(data.storage)]} (${data.varName})`;
 },
 
 //---------------------------------------------------------------------
@@ -57,32 +57,32 @@ html: function(isEvent, data) {
 	return `
 <div>
 	<div style="float: left; width: 35%;">
-		Source List:<br>
+		Fonte da Lista:<br>
 		<select id="storage" class="round" onchange="glob.refreshVariableList(this)">
 			${data.variables[1]}
 		</select>
 	</div>
 	<div id="varNameContainer" style="float: right; width: 60%;">
-		Variable Name:<br>
+		Nome da Variável:<br>
 		<input id="varName" class="round varSearcher" type="text" list="variableList">
 	</div>
 </div><br><br><br>
 <div style="padding-top: 8px;">
 	<div style="float: left; width: 45%;">
-		Add Type:<br>
+		Tipo do Adicionamento:<br>
 		<select id="addType" class="round" onchange="glob.onChange1(this)">
-			<option value="0" selected>Add to End</option>
-			<option value="1">Add to Front</option>
-			<option value="2">Add to Specific Position</option>
+			<option value="0" selected>Adicionar ao Fim</option>
+			<option value="1">Adicionar à Frente</option>
+			<option value="2">Adicionar à uma Posição Específica</option>
 		</select>
 	</div>
 	<div id="positionHolder" style="float: right; width: 50%; display: none;">
-		Position:<br>
+		Posição:<br>
 		<input id="position" class="round" type="text"><br>
 	</div>
 </div><br><br><br>
 <div style="padding-top: 8px;">
-	Value:<br>
+	Valor:<br>
 	<input id="value" class="round" type="text" name="is-eval">
 </div>`
 },

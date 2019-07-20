@@ -23,8 +23,8 @@ section: "Member Control",
 //---------------------------------------------------------------------
 
 subtitle: function(data) {
-	const roles = ['Mentioned Role', '1st Author Role', '1st Server Role', 'Temp Variable', 'Server Variable', 'Global Variable'];
-	const channels = ['Mentioned User', 'Command Author', 'Temp Variable', 'Server Variable', 'Global Variable'];
+	const roles = ['Cargo Mencionado', '1° Cargo do Autor', '1° Cargo do Servidor', 'Variável Temporária', 'Variável de Servidor', 'Variável Global'];
+	const channels = ['Usuário Mencionado', 'Autor do Comando', 'Variável Temporária', 'Variável de Servidor', 'Variável Global'];
 	return `${channels[parseInt(data.member)]} - ${roles[parseInt(data.role)]}`;
 },
 
@@ -58,25 +58,25 @@ html: function(isEvent, data) {
 	return `
 <div>
 	<div style="float: left; width: 35%;">
-		Source Role:<br>
+		Fonte do Cargo:<br>
 		<select id="role" class="round" onchange="glob.roleChange(this, 'varNameContainer')">
 			${data.roles[isEvent ? 1 : 0]}
 		</select>
-	</div>
+	</div> 
 	<div id="varNameContainer" style="display: none; float: right; width: 60%;">
-		Variable Name:<br>
+		Nome da Variável:<br>
 		<input id="varName" class="round" type="text" list="variableList"><br>
 	</div>
 </div><br><br><br>
 <div style="padding-top: 8px;">
 	<div style="float: left; width: 35%;">
-		Member:<br>
+		Fonte do Membro:<br>
 		<select id="member" class="round" onchange="glob.memberChange(this, 'varNameContainer2')">
 			${data.members[isEvent ? 1 : 0]}
 		</select>
 	</div>
 	<div id="varNameContainer2" style="display: none; float: right; width: 60%;">
-		Variable Name:<br>
+		Nome da Variável:<br>
 		<input id="varName2" class="round" type="text"><br>
 	</div>
 </div>`;

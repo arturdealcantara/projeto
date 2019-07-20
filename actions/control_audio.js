@@ -23,7 +23,7 @@ section: "Audio Control",
 //---------------------------------------------------------------------
 
 subtitle: function(data) {
-	const actions = ["Stop Playing", "Pause Audio", "Resume Audio"];
+	const actions = ["Parar de Tocar", "Pausar Áudio", "Retomar Áudio"];
 	return `${actions[parseInt(data.action)]}`;
 },
 
@@ -56,11 +56,11 @@ fields: ["action"],
 html: function(isEvent, data) {
 	return `
 <div style="float: left; width: 80%;">
-	Audio Action:<br>
+  Ação de Áudio:<br>
 	<select id="action" class="round">
-		<option value="0" selected>Stop Playing</option>
-		<option value="1">Pause Audio</option>
-		<option value="2">Resume Audio</option>
+		<option value="0" selected>Parar de Tocar</option>
+		<option value="1">Pausar Áudio</option>
+		<option value="2">Retomar Áudio</option>
 	</select>
 </div>`;
 },

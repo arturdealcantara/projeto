@@ -23,8 +23,8 @@ section: "Conditions",
 //---------------------------------------------------------------------
 
 subtitle: function(data) {
-	const results = ["Continue Actions", "Stop Action Sequence", "Jump To Action", "Jump Forward Actions"];
-	return `If True: ${results[parseInt(data.iftrue)]} ~ If False: ${results[parseInt(data.iffalse)]}`;
+	const results = ["Continuar as Ações", "Parar a Sequência de Ações", "Saltar Para a Ação", "Ignora as Próximas Ações"];
+	return `Se for Verdade: ${results[parseInt(data.iftrue)]} ~ Se for Falsa: ${results[parseInt(data.iffalse)]}`;
 },
 
 //---------------------------------------------------------------------
@@ -57,28 +57,28 @@ html: function(isEvent, data) {
 	return `
 <div>
 	<div style="float: left; width: 35%;">
-		Variable:<br>
+		Fonte da Variável:<br>
 		<select id="storage" class="round" onchange="glob.refreshVariableList(this)">
 			${data.variables[1]}
 		</select>
 	</div>
 	<div id="varNameContainer" style="float: right; width: 60%;">
-		Variable Name:<br>
+		Nome da Variável:<br>
 		<input id="varName" class="round" type="text" list="variableList">
 	</div>
 </div><br><br><br>
 <div style="padding-top: 8px; width: 80%;">
-		Variable Type to Check:<br>
+  Tipo da Variável Para Verificar:<br>
 		<select id="comparison" class="round">
-			<option value="0" selected>Number</option>
+			<option value="0" selected>Número</option>
 			<option value="1">String</option>
-			<option value="2">Image</option>
-			<option value="3">Member</option>
-			<option value="4">Message</option>
-			<option value="5">Text Channel</option>
-			<option value="6">Voice Channel</option>
-			<option value="7">Role</option>
-			<option value="8">Server</option>
+			<option value="2">Imagem</option>
+			<option value="3">Membro</option>
+			<option value="4">Mensagem</option>
+			<option value="5">Canal de Texto</option>
+			<option value="6">Canal de Voz</option>
+			<option value="7">Cargo</option>
+			<option value="8">Servidor</option>
 			<option value="9">Emoji</option>
 		</select>
 </div><br>
